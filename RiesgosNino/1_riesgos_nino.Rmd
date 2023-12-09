@@ -73,7 +73,9 @@ mapa <- leaflet(areas_inundables) %>%
                 weight = 1,
                 color = "white",
                 fillOpacity = 0.7,
-                popup = ~paste(REGIóN2))
+                popup = ~paste("Región: ", REGIóN2, "<br>",
+                               "Fisiografía: ", FISIOG1, "<br>",
+                               "Uso: ", COBUSO))
 mapa
 
 ```
