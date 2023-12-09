@@ -51,6 +51,7 @@ library(leaflet)
 ```
 
 ## Carga de datos
+Fuente: CENEPRED
 
 ```{r Carga de datos}
 areas_inundables <-
@@ -65,6 +66,7 @@ ggplot(data = areas_inundables) +
     theme_minimal()
 ```
 
+## Mapa interactivo
 
 ```{r}
 mapa <- leaflet(areas_inundables) %>%
