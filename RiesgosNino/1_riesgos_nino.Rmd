@@ -16,15 +16,15 @@ Dada la naturaleza impredecible y los efectos potencialmente devastadores del Fe
 
 El propósito principal de este informe es realizar un análisis exhaustivo de los riesgos asociados con el Fenómeno del Niño, utilizando herramientas estadísticas y de análisis de datos en R. Los objetivos específicos incluyen:
 
-Comprensión del Fenómeno: Explorar la naturaleza y las causas del Fenómeno del Niño, así como sus patrones históricos y actuales.
+-   **Comprensión del Fenómeno:** Explorar la naturaleza y las causas del Fenómeno del Niño, así como sus patrones históricos y actuales.
 
-Identificación de Riesgos: Identificar las áreas geográficas y los sectores más vulnerables a los impactos del Fenómeno del Niño, incluyendo la agricultura, la salud pública, y la infraestructura.
+-   **Identificación de Riesgos:** Identificar las áreas geográficas y los sectores más vulnerables a los impactos del Fenómeno del Niño, incluyendo la agricultura, la salud pública, y la infraestructura.
 
-Análisis de Datos Climáticos: Utilizar conjuntos de datos climáticos para analizar tendencias, frecuencia y severidad de los eventos relacionados con el Fenómeno del Niño.
+-   **Análisis de Datos Climáticos:** Utilizar conjuntos de datos climáticos para analizar tendencias, frecuencia y severidad de los eventos relacionados con el Fenómeno del Niño.
 
-Evaluación de Impacto: Evaluar los impactos socioeconómicos y ambientales del Fenómeno del Niño, con un enfoque en eventos recientes.
+-   **Evaluación de Impacto:** Evaluar los impactos socioeconómicos y ambientales del Fenómeno del Niño, con un enfoque en eventos recientes.
 
-Recomendaciones para la Mitigación de Riesgos: Desarrollar recomendaciones basadas en datos para la mitigación de riesgos y la preparación ante futuros eventos del Fenómeno del Niño.
+-   **Recomendaciones para la Mitigación de Riesgos:** Desarrollar recomendaciones basadas en datos para la mitigación de riesgos y la preparación ante futuros eventos del Fenómeno del Niño.
 
 ## Preparación de los datos
 
