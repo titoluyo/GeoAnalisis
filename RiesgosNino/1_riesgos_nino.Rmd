@@ -1,8 +1,20 @@
 ---
-title: "R análisis de riesgos por el Fenómeno del Niño"
+title: "Análisis de riesgos por el Fenómeno del Niño con R"
 output: html_document
 date: "2023-12-09"
 ---
+
+## Grupo
+Integrantes:
+
+- Margareth Chavez Cutti
+
+- Oriana Betzabe Torres Ccencho
+
+- Jhon Kenner Guerrero Pascual
+
+- Tito Luyo Murata
+
 
 ## Introducción
 
