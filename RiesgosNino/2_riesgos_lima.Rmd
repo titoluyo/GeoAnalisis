@@ -1,0 +1,92 @@
+---
+title: "Análisis de riesgos por el Fenómeno del Niño para la provincia de Lima con R"
+output: html_document
+date: "2024-01-13"
+---
+
+## Grupo
+Integrantes:
+
+- Margareth Chavez Cutti
+
+- Oriana Betzabe Torres Ccencho
+
+- Jhon Kenner Guerrero Pascual
+
+- Tito Luyo Murata
+
+
+## Introducción
+
+El Fenómeno del Niño, un complejo y periódico patrón climático originado en el Océano Pacífico, tiene efectos significativos y de amplio alcance en los patrones climáticos globales. Caracterizado por el calentamiento anómalo de las aguas superficiales en el Pacífico ecuatorial oriental, este fenómeno no solo altera los sistemas meteorológicos locales, sino que también tiene repercusiones en la salud, la agricultura, los ecosistemas, y la economía a nivel mundial.
+
+El impacto del Fenómeno del Niño es especialmente notable en su capacidad para modificar los patrones de precipitación y temperatura, lo que puede llevar a extremos climáticos como sequías e inundaciones. Estos cambios, a su vez, pueden desencadenar una serie de riesgos y desafíos para las sociedades humanas y los entornos naturales.
+
+Dada la naturaleza impredecible y los efectos potencialmente devastadores del Fenómeno del Niño, es crucial realizar un análisis detallado de los riesgos asociados. Este análisis puede ayudar a las comunidades, gobiernos y organizaciones internacionales a prepararse y responder de manera más efectiva a los desafíos planteados por estos eventos climáticos.
+
+
+## Objetivos
+
+El propósito principal de este informe es realizar un análisis exhaustivo de los riesgos asociados con el Fenómeno del Niño, utilizando herramientas estadísticas y de análisis de datos en R. Los objetivos específicos incluyen:
+
+-   **Comprensión del Fenómeno:** Explorar la naturaleza y las causas del Fenómeno del Niño, así como sus patrones históricos y actuales.
+
+-   **Identificación de Riesgos:** Identificar las áreas geográficas y los sectores más vulnerables a los impactos del Fenómeno del Niño, incluyendo la agricultura, la salud pública, y la infraestructura.
+
+-   **Análisis de Datos Climáticos:** Utilizar conjuntos de datos climáticos para analizar tendencias, frecuencia y severidad de los eventos relacionados con el Fenómeno del Niño.
+
+-   **Evaluación de Impacto:** Evaluar los impactos socioeconómicos y ambientales del Fenómeno del Niño, con un enfoque en eventos recientes.
+
+-   **Recomendaciones para la Mitigación de Riesgos:** Desarrollar recomendaciones basadas en datos para la mitigación de riesgos y la preparación ante futuros eventos del Fenómeno del Niño.
+
+
+## Preparación de los datos
+
+Limpieza del entorno:
+
+```{r Limpiar el entorno}
+rm(list = ls())
+```
+
+
+
+## Carga de paquetes a usar
+
+Carga los paquetes que se van a utilizar:
+
+```{r Carga de los paquetes necesarios}
+library(tidyverse)
+library(lubridate)
+library(sf)
+library(tmap)
+library(raster)
+library(leaflet)
+
+```
+
+## Carga de datos
+Fuente: Instituto Metropolitano de Planificación (Imp)
+
+```{r Carga de datos}
+manzanas_riesgo <-
+st_read("data/RIESGOS_TODOS_SOLO_LIMA/RIESGOS_LIMA.shp") %>% 
+  glimpse()
+```
+
+
+```{r}
+ggplot(data = manzanas_riesgo) +
+    geom_sf() +
+    theme_minimal()
+```
+
+```{r Carga de datos}
+manzanas_riesgo_alto <- dplyr::select(manzanas_riesgo, idmanzana, departamen, provincia, distrito, inu_niv_ri, num_viv_pa, pob_total, cod_dist, geometry) %>% 
+  dplyr::filter(inu_niv_ri %in% c('ALTO', 'MUY ALTO')) %>% 
+  glimpse()
+```
+```{r}
+ggplot(data = manzanas_riesgo_alto) +
+    geom_sf() +
+    theme_minimal()
+```
