@@ -90,3 +90,27 @@ ggplot(data = manzanas_riesgo_alto) +
     geom_sf() +
     theme_minimal()
 ```
+
+
+```{r carga de cuencas}
+cuenca_chillon <-
+st_read("data/UNIDADES_HIDROGRAFICAS/CHILLON/UnidadesHidrograficas_Chillon.shp")
+
+cuenca_rimac <-
+st_read("data/UNIDADES_HIDROGRAFICAS/RIMAC/UnidadesHidrograficas_rimac.shp")
+
+cuenca_lurin <-
+st_read("data/UNIDADES_HIDROGRAFICAS/LURIN/UnidadesHidrograficas_lurin.shp")
+
+```
+
+
+```{r ploteo mapa riesgo alto cuencas}
+ggplot() + 
+  geom_sf(data = cuenca_lurin) +
+  geom_sf(data = cuenca_rimac) +
+  geom_sf(data = cuenca_chillon) +
+  geom_sf(data = manzanas_riesgo_alto) +
+  theme_minimal()
+```
+
