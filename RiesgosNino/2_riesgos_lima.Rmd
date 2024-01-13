@@ -74,7 +74,7 @@ st_read("data/RIESGOS_TODOS_SOLO_LIMA/RIESGOS_LIMA.shp") %>%
 ```
 
 
-```{r}
+```{r ploteo lotes}
 ggplot(data = manzanas_riesgo) +
     geom_sf() +
     theme_minimal()
@@ -85,7 +85,7 @@ manzanas_riesgo_alto <- dplyr::select(manzanas_riesgo, idmanzana, departamen, pr
   dplyr::filter(inu_niv_ri %in% c('ALTO', 'MUY ALTO')) %>% 
   glimpse()
 ```
-```{r}
+```{r ploteo mapa riesgo alto}
 ggplot(data = manzanas_riesgo_alto) +
     geom_sf() +
     theme_minimal()
