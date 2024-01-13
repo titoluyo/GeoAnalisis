@@ -80,7 +80,7 @@ ggplot(data = manzanas_riesgo) +
     theme_minimal()
 ```
 
-```{r Carga de datos}
+```{r filtrado de datos}
 manzanas_riesgo_alto <- dplyr::select(manzanas_riesgo, idmanzana, departamen, provincia, distrito, inu_niv_ri, num_viv_pa, pob_total, cod_dist, geometry) %>% 
   dplyr::filter(inu_niv_ri %in% c('ALTO', 'MUY ALTO')) %>% 
   glimpse()
